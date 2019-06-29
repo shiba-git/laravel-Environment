@@ -61,7 +61,57 @@ sudo chmod 777 -R /var/www/html
 プロジェクトを作成  
 composer create-project --prefer-dist laravel/laravel project  
 
- 
+ファイヤーウォール停止  
+sudo systemctl stop firewalld  
   
+動作確認  
+php artisan serve --host 192.168.33.10 --port 8000  
+
+MySQLをインストール  
+  mariadbを削除  
+  sudo yum remove mariadb-libs  
+  rm -rf /var/lib/mysql/  
+   
+  sudo vi /etc/resolv.conf  
+  nameserver: 9.9.9.9  
+  
+  sudo yum curl //以下のコマンドでエラーが出ないように  
+  sudo rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm  
+    
+  sudo yum install -y mysql-community-server    
+  
+  MySQL起動  
+  sudo systemctl start mysqld.service   
+  MySQL自動起動  
+  sudo systemctl enable mysqld.service  
+  
+  パスワード確認  
+  sudo cat /var/log/mysqld.log | grep 'temporary password'  
+  
+  初期設定  
+  mysql_secure_installation  
+  
+  ログイン  
+  mysql -u root -p  
+ 
+  mysql> create database mydb;    
+
+  laravelとデータベースと連携  
+  sudo vi .env  
+  DB_CONNECTION=mysql  
+  DB_HOST=127.0.0.1  
+  DB_PORT=3306  
+  DB_DATABASE=mydb  
+  DB_USERNAME=root  
+  DB_PASSWORD=password  
+  
+  連携確認のため、マイグレーション  
+  php artisan migrate  
+  
+  mysql> use mydb;  
+  mysql> show tables;  
+  
+
+
   
 
