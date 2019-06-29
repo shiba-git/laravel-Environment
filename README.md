@@ -20,30 +20,32 @@ vagrant ssh
 zip unzip wget gitインストール  
 sudo yum install -y zip unzip wget git  
   
-apacheインストール
-  sudo yum install -y httpd
+apacheインストール  
+  sudo yum install -y httpd  
   
-  サーバー起動時にApache起動
-  sudo systemctl enable httpd.service
-  
-  Apache起動
-  sudo systemctl restart httpd.service
-  
-  Apache起動確認
-  service httpd status
+  サーバー起動時にApache起動  
+  sudo systemctl enable httpd.service  
+    
+  Apache起動  
+  sudo systemctl restart httpd.service  
+    
+  Apache起動確認  
+  service httpd status  
 
-PHPインストール
-  EPELリポジトリ
-  sudo yum install -y epel-release
+PHPインストール  
+  EPELリポジトリ  
+  sudo yum install -y epel-release  
   
-  remiリポジトリ
-  sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+  remiリポジトリ  
+  sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm  
+   
+  sudo yum update -y //Errorが出た。   
   
-  sudo yum update -y //Errorが出た。 
-  
-  sudo vi /etc/yum.repos.d/epel.repo 
-  baseURLのコメントアウトを外し、アクセス。
-  mirrorlist の URL はコメントアウト
+  sudo vi /etc/yum.repos.d/epel.repo   
+  baseURLのコメントアウトを外し、アクセス。  
+  mirrorlist の URL はコメントアウト  
+    
+    
   
   
   
