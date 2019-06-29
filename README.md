@@ -1,4 +1,4 @@
-# vagrant + centos7 + php73 + laravel5.8 環境構築
+# vagrant + centos7 + php73 + MySQL5.7 + laravel5.8 環境構築
   
 フォルダ作成＆移動  
 mkdir laravel-env   
