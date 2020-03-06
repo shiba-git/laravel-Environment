@@ -115,3 +115,4 @@ MySQLをインストール
 
   
 
+https://qiita.com/nooboolean/items/ffcd6b2229f846f195ec
