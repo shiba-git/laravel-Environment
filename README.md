@@ -116,3 +116,6 @@ MySQLをインストール
   
 
 https://qiita.com/nooboolean/items/ffcd6b2229f846f195ec
+
+mac
+http://blog.livedoor.jp/kmiwa_project/archives/1065132202.html
