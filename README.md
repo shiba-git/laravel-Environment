@@ -68,14 +68,14 @@ sudo systemctl stop firewalld
 php artisan serve --host 192.168.33.10 --port 8000  
 
 MySQLをインストール  
-  mariadbを削除  
+  mariadbを削除（わざわざ消す必要はない） 
   sudo yum remove mariadb-libs  
   rm -rf /var/lib/mysql/  
    
   sudo vi /etc/resolv.conf  
   nameserver: 9.9.9.9  
   
-  sudo yum curl //以下のコマンドでエラーが出ないように  
+  sudo yum curl //以下のコマンドでエラーが出ないように  消してない場合は不要
   sudo rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm  
     
   sudo yum install -y mysql-community-server    
@@ -111,7 +111,9 @@ MySQLをインストール
   mysql> use mydb;  
   mysql> show tables;  
   
-
+  git登録
+  https://qiita.com/yysskk/items/974c9c55d66a26515651
+  鍵を発行して、Github側に登録してコミットする
 
   
 
