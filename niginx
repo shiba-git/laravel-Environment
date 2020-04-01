@@ -6,13 +6,24 @@ https://qiita.com/zushi_0905/items/1be42dc704d65f8a4ff7
 
 amazon-linux-extras 
 
+/etc/nginx/nginx.conf
+/etc/php-fmp/www.conf　の設定をする
+
 nginxとphp-fpmはsockを使用して通信しています。
 再起動する
 https://qiita.com/Yuhkih/items/2b26f3761578637d0005
 
-root　を　/ にします。
+root　を　/ にします。(phpinfoを確認する)
 
 composerをインストール
 https://qiita.com/zushi_0905/items/1be42dc704d65f8a4ff7
 
+git clone で入れる 
+/barkey_tokyo_server/publicにする
+
+phpをインストール後(amazon-linux-extras)は、普通のコマンドでインストールできる
+https://qiita.com/owlbeck/items/20f3e5402cb782f6291e
+
+compserのインストールし、キー関係もやる
+https://qiita.com/masataka715/items/6e46f1f5e53bdff6cd3d
 
