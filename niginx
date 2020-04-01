@@ -1,0 +1,15 @@
+ec2に接続。
+
+shhで接続。ppmで
+インストールはaws専用のコマンドで行う.(amazon-linux-extras)
+https://qiita.com/zushi_0905/items/1be42dc704d65f8a4ff7
+
+amazon-linux-extras 
+
+nginxとphp-fpmはsockを使用して通信しています。
+再起動する
+https://qiita.com/Yuhkih/items/2b26f3761578637d0005
+
+root　を　/ にします。
+
+
