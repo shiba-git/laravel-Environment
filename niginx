@@ -37,5 +37,15 @@ mysql -u admin -p -h database-1.c4vrm26rsxzg.ap-northeast-1.rds.amazonaws.com
 テーブルを作成後、.envで指定すれば完了。あ、マイグレージョンも実行しよう
 
 
+TOP以外のページが表示されない。
+以下のサイトを参考にする。もっとnginxを勉強しないと厳しい。
+https://qiita.com/maip0902/items/2fae4944e0115b40dcdc
+
+サーバーは再起動するとnginx非可動になるので注意が必要。
+
+S3ユーザーを作成し、アクセスキーとシークレットキーを発行して
+.envに登録するあとcomposerもインストール
+
+
 
 
