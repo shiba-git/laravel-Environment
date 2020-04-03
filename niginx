@@ -44,8 +44,6 @@ https://qiita.com/minato-naka/items/03f9dbd09eb3919a501f
 sudo rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
 sudo yum install -y mysql-community-server
 
-作成後普通にエンドポイントを指定して作成する
-mysql -u root -p -h example-rds-mysql-server.carvmoii2uds.ap-northeast-1.rds.amazonaws.com
 mysql -u admin -p -h database-1.c4vrm26rsxzg.ap-northeast-1.rds.amazonaws.com
 
 テーブルを作成後、.envで指定すれば完了。あ、マイグレージョンも実行しよう
