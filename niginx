@@ -3,6 +3,7 @@ ec2に接続。
 shhで接続。ppmで
 インストールはaws専用のコマンドで行う.(amazon-linux-extras)
 https://qiita.com/zushi_0905/items/1be42dc704d65f8a4ff7
+service nginx start
 
 amazon-linux-extras 
 
