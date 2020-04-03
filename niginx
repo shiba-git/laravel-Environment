@@ -45,6 +45,7 @@ https://qiita.com/maip0902/items/2fae4944e0115b40dcdc
 
 S3ユーザーを作成し、アクセスキーとシークレットキーを発行して
 .envに登録するあとcomposerもインストール
+https://github.com/thephpleague/flysystem-aws-s3-v3
 
 
 
