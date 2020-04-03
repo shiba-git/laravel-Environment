@@ -1,35 +1,48 @@
 ec2に接続。
+ssh -i ~/Desktop/aws-barkey-tokyo.pem ec2-user@54.238.70.33
 
-shhで接続。ppmで
-インストールはaws専用のコマンドで行う.(amazon-linux-extras)
-https://qiita.com/zushi_0905/items/1be42dc704d65f8a4ff7
-service nginx start
+sudo yum update -y
 
-amazon-linux-extras 
+nginx 
+sudo amazon-linux-extras install nginx1.12 -y
 
-/etc/nginx/nginx.conf
-/etc/php-fmp/www.conf　の設定をする
+php
+sudo amazon-linux-extras install php7.3 -y
+sudo yum install -y --enablerepo=remi,remi-php73 php php-zip php-devel php-mbstring php-pdo php-xml php-bcmath php-mysqlnd
 
-nginxとphp-fpmはsockを使用して通信しています。
-再起動する
-https://qiita.com/Yuhkih/items/2b26f3761578637d0005
+git
+sudo yum install git
+sudo git clone https://github.com/shiba-git/laravel_sample.git
 
-root　を　/ にします。(phpinfoを確認する)
+sudo vi /etc/php-fpm.d/www.conf
+sudo vi /etc/nginx/nginx.conf
+https://qiita.com/maip0902/items/2fae4944e0115b40dcdc
 
-composerをインストール
-https://qiita.com/zushi_0905/items/1be42dc704d65f8a4ff7
+sudo service nginx start
+sudo service php-fpm start 
 
-git clone で入れる 
-/barkey_tokyo_server/publicにする
+cd ~
+curl -sS https://getcomposer.org/installer | php
 
-phpをインストール後(amazon-linux-extras)は、普通のコマンドでインストールできる
-https://qiita.com/owlbeck/items/20f3e5402cb782f6291e
+$ mkdir ~/bin
+$ mv composer.phar ~/bin/composer
+$ which composer
+~/bin/composer
 
-compserのインストールし、キー関係もやる
-https://qiita.com/masataka715/items/6e46f1f5e53bdff6cd3d
+sudo chmod -R 777 /laravel_sample/
+composer install
+
+cp .env.example .env
+# .envファイルにある「APP_KEY」(アプリケーションキー)の生成
+php artisan key:generate
+
+この時点でアクセス可能
 
 RDSはサブネット系から以下のサイトで作成する。
 https://qiita.com/minato-naka/items/03f9dbd09eb3919a501f
+
+sudo rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
+sudo yum install -y mysql-community-server
 
 作成後普通にエンドポイントを指定して作成する
 mysql -u root -p -h example-rds-mysql-server.carvmoii2uds.ap-northeast-1.rds.amazonaws.com
