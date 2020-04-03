@@ -34,7 +34,7 @@ composer install
 
 cp .env.example .env
 # .envファイルにある「APP_KEY」(アプリケーションキー)の生成
-php artisan key:generate
+php artisan key:generate //重要
 
 この時点でアクセス可能
 
