@@ -52,7 +52,8 @@ Route53でドメイン購入し、SSLを登録する。
 数時間かかる。SSLはロードバランスが必要。
 
 セキュリティグループにHTTPSが必要。
-
+以下の設定でhttpsにする
+https://readouble.com/laravel/5.5/ja/requests.html#configuring-trusted-proxies
 
 
 TOP以外のページが表示されない。
