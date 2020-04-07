@@ -65,6 +65,7 @@ S3ユーザーを作成し、アクセスキーとシークレットキーを発
 .envに登録するあとcomposerもインストール
 https://github.com/thephpleague/flysystem-aws-s3-v3
 
-
+git addしたらCRLF will be replaced by LFなエラー
+$git config --global core.autoCRLF false
 
 
