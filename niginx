@@ -2,6 +2,9 @@
 git
 suで実行する。
 
+composer を最新版にしてcomposer install
+https://qiita.com/kin29ma_n/items/7c814b0e3b270f6a721c
+
 ec2に接続。
 ssh -i ~/Desktop/aws-barkey-tokyo.pem ec2-user@54.238.70.33
 
