@@ -55,11 +55,25 @@ Route53でドメイン購入し、SSLを登録する。
 以下の設定でhttpsにする
 https://readouble.com/laravel/5.5/ja/requests.html#configuring-trusted-proxies
 
+ロードバランサーを導入するとキャッシュなどが共有されない。
+ターゲットグループ＞説明＞維持設定をonにする。
+データベースの設定も合わせる。
+http://blog.serverworks.co.jp/tech/2017/01/05/elb-sticky/
+
+deployerを導入。depがうまくいかないのでcomposerで対応。
+https://qiita.com/nagamoridaiki/items/451e36ae591d91152924
+
+デプロイ先はcurrentフォルダに保存される。
+ちゃんとnginxのルートも合わせる。
+https://deployer.org/docs/how-to-deploy-laravel.html
+
+EC2で鍵を作成してGithubと連携させる。
+controller系はミドルウェア系にエラーが出るので使用できない。
+
 
 TOP以外のページが表示されない。
 以下のサイトを参考にする。もっとnginxを勉強しないと厳しい。
 https://qiita.com/maip0902/items/2fae4944e0115b40dcdc
-
 
 S3ユーザーを作成し、アクセスキーとシークレットキーを発行して
 .envに登録するあとcomposerもインストール
@@ -67,5 +81,7 @@ https://github.com/thephpleague/flysystem-aws-s3-v3
 
 git addしたらCRLF will be replaced by LFなエラー
 $git config --global core.autoCRLF false
+
+
 
 
