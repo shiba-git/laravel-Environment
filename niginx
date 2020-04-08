@@ -67,7 +67,7 @@ https://qiita.com/nagamoridaiki/items/451e36ae591d91152924
 ちゃんとnginxのルートも合わせる。
 https://deployer.org/docs/how-to-deploy-laravel.html
 
-EC2で鍵を作成してGithubと連携させる。
+EC2で鍵を作成してGithubと連携させる。秘密鍵も名前をそろえる。(id_rsa)
 controller系はミドルウェア系にエラーが出るので使用できない。
 
 
