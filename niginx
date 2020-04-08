@@ -1,3 +1,7 @@
+
+git
+suで実行する。
+
 ec2に接続。
 ssh -i ~/Desktop/aws-barkey-tokyo.pem ec2-user@54.238.70.33
 
