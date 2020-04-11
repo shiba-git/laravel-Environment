@@ -1,0 +1,11 @@
+Model は複数形をアクセスするためmigrateの時に複数形を作成する。
+Routeを気を付けるform の場合は、ちゃんとpostにする。
+fail()を使用する場合validatorを読んで使用する。
+
+validateを日本語化するには以下のサイトを参考にする
+https://qiita.com/Rock22/items/1db96c801d78ebafb7cc
+
+redirect()を使用するとフォームの中身が空になるためoldを使用する。
+↑（エラーの時）リダイレクトが同じ場合は、withInputで内容を持ってくる。
+
+
