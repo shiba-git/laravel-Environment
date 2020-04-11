@@ -8,4 +8,14 @@ https://qiita.com/Rock22/items/1db96c801d78ebafb7cc
 redirect()を使用するとフォームの中身が空になるためoldを使用する。
 ↑（エラーの時）リダイレクトが同じ場合は、withInputで内容を持ってくる。
 
+画像はストアで保存する。パスも保存しておかないと表示できないよ。
+$temp_path = $imagefile->store('public/temp');
+
+createは配列型で渡す。
+Pan::create([
+  'image' => $imagepath,
+  'storename' => $request->storename,
+  'panname' => $request->panname,
+]);
+
 
