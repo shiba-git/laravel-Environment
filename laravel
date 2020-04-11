@@ -18,4 +18,5 @@ Pan::create([
   'panname' => $request->panname,
 ]);
 
+{!! nl2br(e($pan->panname)) !!} エスケープ
 
