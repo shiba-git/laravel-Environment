@@ -20,3 +20,13 @@ Pan::create([
 
 {!! nl2br(e($pan->panname)) !!} エスケープ
 
+paginate カスタマイズ
+https://blog.hiroyuki90.com/articles/laravel-pagination/
+
+//take(12)->get()->chunk(6);
+$panspage = Pan::orderBy('created_at', 'desc')->paginate(12);
+$pans = $panspage->chunk(6); //二次配列になる。viewで指定するのを忘れないこと。
+https://readouble.com/laravel/5.5/ja/collections.html#method-chunk
+paginateを一回変数に格納したほうが良い。orderByはコレクションになる。//takeでも対応できる。
+
+
