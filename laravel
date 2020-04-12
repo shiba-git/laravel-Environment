@@ -29,4 +29,14 @@ $pans = $panspage->chunk(6); //二次配列になる。viewで指定するのを
 https://readouble.com/laravel/5.5/ja/collections.html#method-chunk
 paginateを一回変数に格納したほうが良い。orderByはコレクションになる。//takeでも対応できる。
 
+更新する場合
+$pan->fill($request->all())=>save(); //ベスト
+配列内容を書き換える場合は、fill() と　all()を先に行うと楽。
+
+storeは空では実行できない。
+if ($request->hasFile('image') && $request->file('image')->isValid()) {}
+
+
+
+
 
