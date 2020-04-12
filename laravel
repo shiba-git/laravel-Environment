@@ -36,6 +36,7 @@ $pan->fill($request->all())=>save(); //ベスト
 storeは空では実行できない。
 if ($request->hasFile('image') && $request->file('image')->isValid()) {}
 
+echo より var_dumpにしたほうが中身が表示される。
 
 
 
