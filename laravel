@@ -40,3 +40,5 @@ echo より var_dumpにしたほうが中身が表示される。
 
 where("permit" "1") これで許可したものや、決まった値のみが表視される。 
 
+ALTER TABLE `tablename` auto_increment = 1;
+//連番をリセットする
