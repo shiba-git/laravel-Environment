@@ -45,3 +45,6 @@ ALTER TABLE `tablename` auto_increment = 1;
 
 $pans = Pan::all()->random(6); ランダム
 idをそろえないと紐づけするのは厳しい
+
+App\Store::find(1).pans()->get() で全て取れる。modelの関数が実行されるイメージです。
+php artisan tinkerで調べる
