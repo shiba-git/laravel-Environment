@@ -49,3 +49,6 @@ idをそろえないと紐づけするのは厳しい
 
 App\Store::find(1).pans()->get() で全て取れる。modelの関数が実行されるイメージです。
 php artisan tinkerで調べる
+
+多対多　中間テーブルはアルファベット順
+checkboxはnameを配列にしてoldを取る 文字列の場合可能性が高いから照合するときも文字列にする
