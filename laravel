@@ -52,3 +52,14 @@ php artisan tinkerで調べる
 
 多対多　中間テーブルはアルファベット順
 checkboxはnameを配列にしてoldを取る 文字列の場合可能性が高いから照合するときも文字列にする
+
+titleは、以下で設定
+https://teratail.com/questions/208548
+
+checkbox データをcheckboxに充てる。idを取り出しまわしているidにあっているか確認する.
+@foreach ($tags as $tag)
+    <input type="checkbox" name="tag[]" value="{!! nl2br(e($tag->id)) !!}" 
+    id="tag-{!! nl2br(e($tag->id)) !!}" {{ is_array($pan->tags->all()) && in_array($tag->id, $pan->tags->pluck('id')->all(), true)? 'checked="checked"' : '' }}>
+    <label for="tag-{!! nl2br(e($tag->id)) !!}" class="label create-label">{!! nl2br(e($tag->tagName)) !!}</label>
+@endforeach
+
