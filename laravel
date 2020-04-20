@@ -63,3 +63,5 @@ checkbox データをcheckboxに充てる。idを取り出しまわしているi
     <label for="tag-{!! nl2br(e($tag->id)) !!}" class="label create-label">{!! nl2br(e($tag->tagName)) !!}</label>
 @endforeach
 
+submit
+https://medium.com/@vineeth030/laravel-confirm-dialog-for-delete-button-5976554d839
