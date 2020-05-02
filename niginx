@@ -89,6 +89,8 @@ https://github.com/thephpleague/flysystem-aws-s3-v3
 git addしたらCRLF will be replaced by LFなエラー
 $git config --global core.autoCRLF false
 
+ドメインの変更は、以下を行う。
+https://teratail.com/questions/258222?reply=true
 
 
 
