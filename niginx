@@ -92,5 +92,12 @@ $git config --global core.autoCRLF false
 ドメインの変更は、以下を行う。
 https://teratail.com/questions/258222?reply=true
 
-
+location = /50x.html {
+    root /var/www/project/error;
+}
+location = /40x.html {
+    root /var/www/project/error;
+    allow all;
+}
+上記を削除して、エラーを書き出す。
 
