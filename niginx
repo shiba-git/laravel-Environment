@@ -101,3 +101,16 @@ location = /40x.html {
 }
 上記を削除して、エラーを書き出す。
 
+AWS S3 Adapter class not found 
+>  composer require league/flysystem-aws-s3-v3:~1.0
+PHP Fatal error:  Out of memory 
+> swap で対処
+> https://github.com/composer/composer/issues/945#issuecomment-8552757
+composer が見つからない
+> 権限がある場所でDL /bin/
+> 移動 sudo mv composer.phar /usr/local/bin/composer.phar
+> alias 設定。 alias composer="php /usr/local/bin/composer.phar"
+
+S3 AccessDenied 
+
+
