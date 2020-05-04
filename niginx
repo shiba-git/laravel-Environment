@@ -114,4 +114,6 @@ composer が見つからない
 S3 AccessDenied 
 アクセス権を修正する
 
+nginx basic認証
+http://tanihiro.hatenablog.com/entry/2014/02/05/172938
 
