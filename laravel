@@ -65,3 +65,10 @@ checkbox データをcheckboxに充てる。idを取り出しまわしているi
 
 submit
 https://medium.com/@vineeth030/laravel-confirm-dialog-for-delete-button-5976554d839
+
+パンくず 構造化マップ 参考
+https://search.google.com/structured-data/testing-tool?utm_campaign=devsite&utm_medium=microdata&utm_source=breadcrumb
+$loop->indexで何番目か取得できる
+
+
+
