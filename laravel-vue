@@ -1,0 +1,6 @@
+2点目はpasswordにnull許容を付けて、パスワードが空の状態を認めています。
+これは、Googleアカウントを使ったユーザー登録の場合、本教材のWebサービスではパスワードを設定不要にしているためです。
+
+データベースの設計図 https://it-koala.com/entity-relationship-diagram-1897
+
+
