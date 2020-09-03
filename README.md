@@ -90,6 +90,7 @@ MySQLをインストール
   
   初期設定  
   mysql_secure_installation  
+  https://mariadb.com/kb/ja/mysql_secure_installation/
   
   ログイン  
   mysql -u root -p  
