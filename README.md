@@ -51,14 +51,14 @@ composerのインストール
   curl -sS https://getcomposer.org/installer | php  
   sudo mv composer.phar /usr/local/bin/composer  
   
-Laravelのインストール  
+Laravelのインストール  この時点ではバージョンは関係ない
   composer global require laravel/installer  
   
 作成するディレクトリまで移動、権限付与  
 cd /var/www/html   
 sudo chmod 777 -R /var/www/html  
    
-プロジェクトを作成  
+プロジェクトを作成  ここでバージョンを指定することできる
 composer create-project --prefer-dist laravel/laravel project  
 
 ファイヤーウォール停止  
