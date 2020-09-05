@@ -31,3 +31,9 @@ class User extends Authenticatable
 4-5
 DI(Dependency Injection)について確認する
 fillableプロパティを定義したことで、クライアントからのリクエストのパラメーター値をそのまま取り込んで更新しても良いプロパティは、titleとbodyのみと制限されるようになりました。
+
+npm run watch-pollについて  
+以下と同様にcross-env.jsのパスを合わせる  
+https://www.webnoha.work/blog/20190505-install-laravel-mix/  
+
+
