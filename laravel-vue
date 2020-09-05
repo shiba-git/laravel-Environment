@@ -3,4 +3,31 @@
 
 データベースの設計図 https://it-koala.com/entity-relationship-diagram-1897
 
+viewメソッドで他にも渡す方法があります。
+return view('articles.index')->with(['articles' => $articles]);
+return view('articles.index', compact('articles'));
 
+いいデザイン　https://mdbootstrap.com/docs/jquery/components/demo/
+
+先にマイグレーションしているとエラーが出るのでphp artisan migrate:freshでテーブルを削除してから実行。
+// 1-5 記事テーブルとユーザーテーブルの作成
+
+また、HTTPメソッドはPOSTである必要があるので、aタグではなく、buttonタグとformタグを使用しています
+
+https://readouble.com/laravel/6.x/ja/validation-php.html validation.php
+
+2-8 
+App\Userにはpasswordやremember_tokenといったプロパティがあるのに、それらが表示されていないのはUserモデルにおいて、表示しない指定がされているためです。
+<?php
+// 略
+class User extends Authenticatable
+{
+    // 略
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+}
+
+4-5
+DI(Dependency Injection)について確認する
+fillableプロパティを定義したことで、クライアントからのリクエストのパラメーター値をそのまま取り込んで更新しても良いプロパティは、titleとbodyのみと制限されるようになりました。
