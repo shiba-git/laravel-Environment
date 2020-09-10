@@ -1,0 +1,19 @@
+https://qiita.com/tom-sato/items/e1903cb974fb6c6d5664
+ここでpsqlをダウンロードする(全手順をやる)
+
+https://qiita.com/koukibuu3/items/64e8efc04312c187b733
+ここでpsqlとlaravelの設定をする しかしドライバーがないので以下でエラーになる。
+
+https://qiita.com/SOJO/items/64bcc7954a32a5165498
+ドライバーがないエラー
+
+https://qiita.com/fromage-blanc/items/0759f1efb4cc2cd6f6c6
+しかし、ただダウンロードしてはダメ。リポジトリを参照したものをダウンロードする
+
+---------------------
+
+git clone 
+composer install
+php artisan migrate
+
+--------------
