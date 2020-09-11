@@ -21,3 +21,6 @@ composer install
 php artisan migrate
 
 --------------
+
+ディレクト全部削除
+--interactive=never
